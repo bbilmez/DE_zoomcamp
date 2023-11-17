@@ -2,7 +2,7 @@ from prefect.deployments import Deployment
 from prefect.infrastructure.container import DockerContainer
 from etl_web_to_gcs import etl_parent_flow
 
-docker_block = DockerContainer.load("de-zoomcamp")
+docker_block = DockerContainer.load("zoom")
 
 docker_dep = Deployment.build_from_flow(
     flow = etl_parent_flow,
