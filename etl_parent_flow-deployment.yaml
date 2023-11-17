@@ -35,7 +35,7 @@ infrastructure:
   block_type_slug: process
   _block_type_slug: process
 storage: null
-path: /Users/banubilmez/Courses/DataEngineering/data-engineering-zoomcamp-main/week_2_workflow_orchestration/hw_2
+path: /Users/bb/Courses/DataEngineering/hw_2
 entrypoint: etl_gcs_to_bq.py:etl_parent_flow
 parameter_openapi_schema:
   title: Parameters
