@@ -52,14 +52,14 @@ def etl_gcs_to_bq(year:int, month:int, color:str):
 
 @flow()
 def etl_parent_flow(
-months: list[int] = [2,3], year: int=2019, color:str = 'yellow'
+months: list[int] = [11], year: int=2020, color:str = 'green'
 ):
     for month in months:
         etl_gcs_to_bq(year, month, color)
 
 
 if __name__ == "__main__":
-    color = "yellow"
-    months = [2,3]
-    year = 2019
+    color = "green"
+    months = [11]
+    year = 2020
     etl_parent_flow(months, year, color)
