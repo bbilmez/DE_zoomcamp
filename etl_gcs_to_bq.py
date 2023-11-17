@@ -60,6 +60,6 @@ months: list[int] = [11], year: int=2020, color:str = 'green'
 
 if __name__ == "__main__":
     color = "green"
-    months = [11]
-    year = 2020
+    months = [4]
+    year = 2019
     etl_parent_flow(months, year, color)

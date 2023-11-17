@@ -3,24 +3,18 @@
 ###
 name: etl2
 description: null
-version: b102ae4909385d91cb41d0dca4fb5ded
+version: 6a9b78954cf6264efc83075b7f982d5c
 # The work queue that will handle this deployment's runs
 work_queue_name: default
-work_pool_name: default-agent-pool
+work_pool_name: null
 tags: []
 parameters: {}
 schedule:
   cron: ' 0 5 1 * *'
   timezone: null
   day_or: true
-is_schedule_active: true
+is_schedule_active: null
 infra_overrides: {}
-
-###
-### DO NOT EDIT BELOW THIS LINE
-###
-flow_name: etl-parent-flow
-manifest_path: null
 infrastructure:
   type: process
   env: {}
@@ -29,14 +23,17 @@ infrastructure:
   command: null
   stream_output: true
   working_dir: null
-  _block_document_id: a502b2bf-10cd-4def-b18d-98226369ab51
-  _block_document_name: anonymous-15bb80c2-a951-4f44-bc3c-ad4db3ad8423
-  _is_anonymous: true
   block_type_slug: process
   _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: etl-parent-flow
+manifest_path: null
 storage: null
-path: /Users/bb/Courses/DataEngineering/hw_2
-entrypoint: etl_gcs_to_bq.py:etl_parent_flow
+path: /Users/banubilmez/Courses/DataEngineering/data-engineering-zoomcamp-main/week_2_workflow_orchestration/hw_2/de_zoomcamp/hw_2
+entrypoint: etl_web_to_gcs.py:etl_parent_flow
 parameter_openapi_schema:
   title: Parameters
   type: object
@@ -44,15 +41,14 @@ parameter_openapi_schema:
     months:
       title: months
       default:
-      - 1
-      - 2
+      - 11
       position: 0
       type: array
       items:
         type: integer
     year:
       title: year
-      default: 2021
+      default: 2020
       position: 1
       type: integer
     color:
@@ -62,6 +58,6 @@ parameter_openapi_schema:
       type: string
   required: null
   definitions: null
-timestamp: '2023-11-15T14:23:47.984465+00:00'
+timestamp: '2023-11-17T15:17:44.819458+00:00'
 triggers: []
 enforce_parameter_schema: null
